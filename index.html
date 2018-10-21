@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>갈비뼈 피아노</title>
+	<style type="text/css">
+		html {background: url(img/background.gif) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+
+
+		#omaenoDiv {width:840px; height:300px; margin:auto; text-align:center;}
+		#omaeno {width:350px;}
+
+		#piano {width:840px; height:310px; margin:auto; margin-top:30px;}
+		#white1 {position:absolute; margin-left:0px; cursor:pointer;}
+		#white2 {position:absolute; margin-left:60px; cursor:pointer;}
+		#white3 {position:absolute; margin-left:120px; cursor:pointer;}
+		#black1 {position:absolute; margin-left:40px;}
+		#black2 {position:absolute; margin-left:100px;}
+		#white4 {position:absolute; margin-left:180px; cursor:pointer;}
+		#white5 {position:absolute; margin-left:240px; cursor:pointer;}
+		#white6 {position:absolute; margin-left:300px; cursor:pointer;}
+		#white7 {position:absolute; margin-left:360px; cursor:pointer;}
+		#black3 {position:absolute; margin-left:220px;}
+		#black4 {position:absolute; margin-left:280px;}
+		#black5 {position:absolute; margin-left:340px;}
+
+		#white8 {position:absolute; margin-left:420px; cursor:pointer;}
+		#white9 {position:absolute; margin-left:480px; cursor:pointer;}
+		#white10 {position:absolute; margin-left:540px; cursor:pointer;}
+		#black6 {position:absolute; margin-left:460px;}
+		#black7 {position:absolute; margin-left:520px;}
+		#white11 {position:absolute; margin-left:600px; cursor:pointer;}
+		#white12 {position:absolute; margin-left:660px; cursor:pointer;}
+		#white13 {position:absolute; margin-left:720px; cursor:pointer;}
+		#white14 {position:absolute; margin-left:780px; cursor:pointer;}
+		#black8 {position:absolute; margin-left:640px;}
+		#black9 {position:absolute; margin-left:700px;}
+		#black10 {position:absolute; margin-left:760px;}
+
+		#boneDiv {width:840px; height:310px; position:absolute; top:208px; left:50%; transform:translateX(-50%)}
+		#bone1 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone2 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone3 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone4 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone5 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone6 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone7 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone8 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone9 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone10 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone11 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone12 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone13 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+		#bone14 {width:60px; height:125px; top:130px; position:relative; animation:bone 0.7s; animation-play-state: paused; float:left;}
+
+
+		@keyframes bone {
+		from {top:130px; opacity:1;}
+		to {top:0px; opacity:0;}
+		}
+
+
+		@keyframes sparkle {
+ 		from {background-position: 0% 100%;}
+  		to {background-position: 200% 100%;}
+		}
+
+
+		.test {
+  		display: inline-block;
+  		padding: 1em;
+  		border-radius: 4px;
+  		position: relative;
+		}
+
+		.test:before {
+        animation: sparkle 4s infinite linear;
+  		background: linear-gradient(90deg, #FF3F3F 0%, #FFC13F 11%, #B64BEF 22%, #FF3F3F 33%, #FFC13F 44%, #B64BEF 55%, #FF3F3F 66%, #FFC13F 77%, #B64BEF 88%, #FF3F3F 100%);
+  		background-size: 300% 100%;
+ 		content: '';
+		position: absolute;
+  		left: 0;
+  		top: 0;
+  		width: 100%;
+ 		height: 100%;
+		z-index: -1;
+		transform: scale(0.99) translateY(3px);
+		}
+
+		#test {width:840px; height:20px; margin:auto; margin-top:10px;}
+
+
+	</style>
+</head>
+<body>
+	<div id="omaenoDiv">
+		<img src="img/omaeno.png" id="omaeno">
+	</div>
+
+
+	<div id="boneDiv">
+	<div><img src="img/bone.png" id="bone1"></div>
+	<div><img src="img/bone.png" id="bone2"></div>
+	<div><img src="img/bone.png" id="bone3"></div>
+	<div><img src="img/bone.png" id="bone4"></div>
+	<div><img src="img/bone.png" id="bone5"></div>
+	<div><img src="img/bone.png" id="bone6"></div>
+	<div><img src="img/bone.png" id="bone7"></div>
+	<div><img src="img/bone.png" id="bone8"></div>
+	<div><img src="img/bone.png" id="bone9"></div>
+	<div><img src="img/bone.png" id="bone10"></div>
+	<div><img src="img/bone.png" id="bone11"></div>
+	<div><img src="img/bone.png" id="bone12"></div>
+	<div><img src="img/bone.png" id="bone13"></div>
+	<div><img src="img/bone.png" id="bone14"></div>
+	</div>
+
+
+	<div id="piano">
+		<img src="img/red.png" id="white1">
+		<img src="img/orange.png" id="white2">
+		<img src="img/yellow.png" id="white3">
+		<img src="img/black.png" id="black1">
+		<img src="img/black.png" id="black2">
+		<img src="img/green.png" id="white4">
+		<img src="img/sky.png" id="white5">
+		<img src="img/blue.png" id="white6">
+		<img src="img/violet.png" id="white7">
+		<img src="img/black.png" id="black3">
+		<img src="img/black.png" id="black4">
+		<img src="img/black.png" id="black5">
+
+		<img src="img/red.png" id="white8">
+		<img src="img/orange.png" id="white9">
+		<img src="img/yellow.png" id="white10">
+		<img src="img/black.png" id="black6">
+		<img src="img/black.png" id="black7">
+		<img src="img/green.png" id="white11">
+		<img src="img/sky.png" id="white12">
+		<img src="img/blue.png" id="white13">
+		<img src="img/violet.png" id="white14">
+		<img src="img/black.png" id="black8">
+		<img src="img/black.png" id="black9">
+		<img src="img/black.png" id="black10">
+		
+	</div>
+
+	<div id="test">
+	<div class="test">
+		<span style="color:white">띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥땡똥띵똥</span>
+	</div>
+	</div>
+
+	<div>
+		<audio id=doo><source src="sound/do.mp3" type="audio/mpeg"></audio>
+		<audio id=re><source src="sound/re.mp3" type="audio/mpeg"></audio>
+		<audio id=mi><source src="sound/mi.mp3" type="audio/mpeg"></audio>
+		<audio id=fa><source src="sound/fa.mp3" type="audio/mpeg"></audio>
+		<audio id=sol><source src="sound/sol.mp3" type="audio/mpeg"></audio>
+		<audio id=ra><source src="sound/ra.mp3" type="audio/mpeg"></audio>
+		<audio id=si><source src="sound/si.mp3" type="audio/mpeg"></audio>
+		<audio id=odo><source src="sound/odo.mp3" type="audio/mpeg"></audio>
+		<audio id=ore><source src="sound/ore.mp3" type="audio/mpeg"></audio>
+		<audio id=omi><source src="sound/omi.mp3" type="audio/mpeg"></audio>
+		<audio id=ofa><source src="sound/ofa.mp3" type="audio/mpeg"></audio>
+		<audio id=osol><source src="sound/osol.mp3" type="audio/mpeg"></audio>
+		<audio id=ora><source src="sound/ora.mp3" type="audio/mpeg"></audio>
+		<audio id=osi><source src="sound/osi.mp3" type="audio/mpeg"></audio>
+	</div>
+
+	
+
+	<script type="text/javascript">
+		white1.onclick=function(){bone1.style.animationPlayState="running"; doo.play();}
+		white2.onclick=function(){bone2.style.animationPlayState="running"; re.play();}
+		white3.onclick=function(){bone3.style.animationPlayState="running"; mi.play();}
+		white4.onclick=function(){bone4.style.animationPlayState="running"; fa.play();}
+		white5.onclick=function(){bone5.style.animationPlayState="running"; sol.play();}
+		white6.onclick=function(){bone6.style.animationPlayState="running"; ra.play();}
+		white7.onclick=function(){bone7.style.animationPlayState="running"; si.play();}
+		white8.onclick=function(){bone8.style.animationPlayState="running"; odo.play();}
+		white9.onclick=function(){bone9.style.animationPlayState="running"; ore.play();}
+		white10.onclick=function(){bone10.style.animationPlayState="running"; omi.play();}
+		white11.onclick=function(){bone11.style.animationPlayState="running"; ofa.play();}
+		white12.onclick=function(){bone12.style.animationPlayState="running"; osol.play();}
+		white13.onclick=function(){bone13.style.animationPlayState="running"; ora.play();}
+		white14.onclick=function(){bone14.style.animationPlayState="running"; osi.play();}
+	</script>
+
+</body>
+</html>
